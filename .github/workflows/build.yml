@@ -18,3 +18,8 @@ jobs:
         run: ./gradlew applyPatches --stacktrace
       - name: Build
         run: ./gradlew build --stacktrace
+      - name: upload Purpur-server
+        uses: actions/upload-artifact@v2
+        with:
+          name: Artifacts
+          path: Purpur-Server/build/libs/
